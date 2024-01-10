@@ -1,6 +1,6 @@
 import Nav from "./Components/Nav";
 import Home from "./Components/Home";
-import Education from "./Components/Education";
+import Education from "./Components/Education/Education";
 function App() {
   return (
     <div>

@@ -3,15 +3,24 @@ import { Link } from "react-scroll";
 import contact from "../../src/Asset/Contact.png";
 import jey from "../../src/Asset/jey.png";
 
-function Nav() {
+const Nav = () => {
   return (
-    <nav className=" max-w-[83rem] mx-auto my-0 h-[5rem] w-screen flex justify-between items-center sticky top-0 px-[3rem] py-[2rem] z-[3]">
+    <nav className=" max-w-[83rem] mx-auto my-0 h-[5rem] w-screen flex justify-between items-center sticky top-0 px-[3rem] py-[2rem] z-[3] bg-black">
       <img className="h-[3rem] w-[4rem] object-cover" src={jey} alt="" />
       <div>
-        <Link className="m-[1rem] cursor-pointer hover:text-yellow-500 hover:border-b-[3px] hover:border-yellow-500 hover:pb-[0.5rem]">
+        <Link
+          to="home"
+          activeClass="active"
+          className="m-[1rem] cursor-pointer hover:text-yellow-500 hover:border-b-[3px] hover:border-yellow-500 hover:pb-[0.5rem]"
+        >
           Home
         </Link>
-        <Link className="m-[1rem] cursor-pointer  hover:text-yellow-500 hover:border-b-[3px] hover:border-yellow-500 hover:pb-[0.5rem]">
+        <Link
+          to="education"
+          activeClass="active"
+          spy={true}
+          className="m-[1rem] cursor-pointer  hover:text-yellow-500 hover:border-b-[3px] hover:border-yellow-500 hover:pb-[0.5rem]"
+        >
           Education
         </Link>
         <Link className="m-[1rem] cursor-pointer  hover:text-yellow-500 hover:border-b-[3px] hover:border-yellow-500 hover:pb-[0.5rem]">
@@ -28,6 +37,6 @@ function Nav() {
       </button>
     </nav>
   );
-}
+};
 
 export default Nav;
