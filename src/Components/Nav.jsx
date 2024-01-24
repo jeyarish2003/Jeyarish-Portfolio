@@ -11,6 +11,10 @@ const Nav = () => {
         <Link
           to="home"
           activeClass="active"
+          spy={true}
+          offset={-100}
+          smooth={true}
+          duration={500}
           className="m-[1rem] cursor-pointer hover:text-yellow-500 hover:border-b-[3px] hover:border-yellow-500 hover:pb-[0.5rem]"
         >
           Home
@@ -19,11 +23,22 @@ const Nav = () => {
           to="education"
           activeClass="active"
           spy={true}
+          offset={-80}
+          smooth={true}
+          duration={500}
           className="m-[1rem] cursor-pointer  hover:text-yellow-500 hover:border-b-[3px] hover:border-yellow-500 hover:pb-[0.5rem]"
         >
           Education
         </Link>
-        <Link className="m-[1rem] cursor-pointer  hover:text-yellow-500 hover:border-b-[3px] hover:border-yellow-500 hover:pb-[0.5rem]">
+        <Link
+          to=""
+          activeClass="active"
+          spy={true}
+          offset={-100}
+          smooth={true}
+          duration={500}
+          className="m-[1rem] cursor-pointer  hover:text-yellow-500 hover:border-b-[3px] hover:border-yellow-500 hover:pb-[0.5rem]"
+        >
           Portfolio
         </Link>
       </div>
@@ -33,7 +48,7 @@ const Nav = () => {
           src={contact}
           alt=""
         />
-        Contact me
+        <span className="mr-5">Contact me</span>
       </button>
     </nav>
   );

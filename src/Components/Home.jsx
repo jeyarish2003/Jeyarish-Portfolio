@@ -1,11 +1,11 @@
 import React from "react";
-import pic from "../../src/Asset/pic.png";
+import pic from "..//Asset//jeya.png";
 
 function Home() {
   return (
     <section
       id="home"
-      className="w-screen h-[calc(100vh-4rem)] max-w-[90rem] mx-auto my-0 overflow-hidden relative"
+      className="w-screen h-[calc(100vh-4rem)] max-w-[90rem] mx-auto my-0 overflow-hidden flex "
     >
       <div className="h-screen w-screen p-[4rem] text-[3rem] font-bold flex flex-col justify-center">
         <span className="text-[1.75rem] font-thin ">Hello,</span>
@@ -16,7 +16,7 @@ function Home() {
           I am a Quick Learner and Passionate About Coding
         </p>
       </div>
-      <img className="" src={pic} alt="" />
+      <img className="h-screen w-100" src={pic} alt="" />
     </section>
   );
 }
