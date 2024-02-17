@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import pic from "../src/Asset/scroll-up.jpeg";
+import pic from "../Asset/scroll-up.jpeg";
 
 function Scrollup() {
   const [visible, setVisible] = useState(false);

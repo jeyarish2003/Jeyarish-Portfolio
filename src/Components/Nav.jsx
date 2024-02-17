@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-scroll";
 import contact from "../../src/Asset/Contact.png";
 import jey from "../../src/Asset/jey.png";

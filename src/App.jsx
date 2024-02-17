@@ -2,10 +2,8 @@ import Nav from "./Components/Nav";
 import Home from "./Components/Home";
 import Education from "./Components/Education/Education";
 import Contact from "./Components/Contact";
+import Scrollup from "./Components/Scrollup";
 
-import Scrollup from "./Scrollup";
-
-// import Scroll from "./Components/Scroll";
 function App() {
   return (
     <div>
