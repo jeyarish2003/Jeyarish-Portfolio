@@ -22,7 +22,7 @@ const Nav = () => {
           to="education"
           activeClass="active"
           spy={true}
-          offset={-80}
+          offset={-40}
           smooth={true}
           duration={500}
           className="m-[1rem] cursor-pointer  hover:text-yellow-500 hover:border-b-[3px] hover:border-yellow-500 hover:pb-[0.5rem]"
@@ -30,7 +30,7 @@ const Nav = () => {
           Education
         </Link>
         <Link
-          to=""
+          to="portfolio"
           activeClass="active"
           spy={true}
           offset={-100}
@@ -41,14 +41,20 @@ const Nav = () => {
           Portfolio
         </Link>
       </div>
-      <button className=" border-[none] flex justify-center items-center bg-white text-black rounded-[2rem] py- 0 px-[1rem]">
-        <img
-          className="h-[1rem] w-[1rem] object-cover m-[1rem] mt-[20px]"
-          src={contact}
-          alt=""
-        />
-        <span className="mr-5">Contact me</span>
-      </button>
+<a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=jeyarish@example.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-x-2 bg-white text-black rounded-2xl px-4 py-2"
+>
+  <img
+    className="h-4 w-4 object-contain"
+    src={contact}
+    alt="Contact Icon"
+  />
+  <span>Contact me</span>
+</a>
+
     </nav>
   );
 };
