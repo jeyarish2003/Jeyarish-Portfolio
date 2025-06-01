@@ -1,5 +1,4 @@
-import React from 'react';
-import { Briefcase, ExternalLink } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 
 const Portfolio = () => {
   const experiences = [
