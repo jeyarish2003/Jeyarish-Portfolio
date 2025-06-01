@@ -20,6 +20,8 @@ function Education() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const currentSection = sectionRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -27,9 +29,10 @@ function Education() {
       { threshold: 0.3 }
     );
 
-    if (sectionRef.current) observer.observe(sectionRef.current);
+    if (currentSection) observer.observe(currentSection);
+
     return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      if (currentSection) observer.unobserve(currentSection);
     };
   }, []);
 
