@@ -7,7 +7,29 @@ const Portfolio = () => {
       title: "Full Stack Developer",
       company: "ANDIRAN HEALTH TECH PVT LTD",
       period: "June 2024 - May 2025",
-      description: "Developed RESTful APIs using FastAPI and integrated databases like ScyllaDB, PostgreSQL, and Apache Druid",
+      description: [
+        {
+          heading: "Population Governance Research",
+          points: [
+            "Developed an API using Python FastAPI.",
+            "Worked on ScyllaDB, PostgreSQL, and Apache Druid.",
+            "Managed data streaming using NATS FastStream."
+          ]
+        },
+        {
+          heading: "Event Based Surveillance",
+          points: [
+            "Built an application with Firebase connected to PostgreSQL.",
+            "Implemented ETL processes using Python in Firebase Cloud Functions."
+          ]
+        },
+        {
+          heading: "Clinical Governance Research",
+          points: [
+            "Created UI screens using the Flutter framework."
+          ]
+        }
+      ],
       showLearnMore: true,
       isActive: true
     }
@@ -27,11 +49,11 @@ const Portfolio = () => {
           {/* Timeline line */}
           <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-700"></div>
 
-          {experiences.map((experience, index) => (
+          {experiences.map((experience) => (
             <div key={experience.id} className="relative mb-16 last:mb-0">
               {/* Timeline dot */}
               <div className="absolute left-2.5 w-4 h-4 bg-yellow-500 rounded-full border-4 border-gray-900"></div>
-              
+
               {/* Content */}
               <div className="ml-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                 {/* Left column - Job details */}
@@ -47,13 +69,23 @@ const Portfolio = () => {
                   </p>
                 </div>
 
-                {/* Right column - Description */}
-                <div>
-                  <p className="text-gray-300 leading-relaxed mb-4">jdhafosjgofjgoijgsdogjfdi
-                    {experience.description}
-                  </p>
-                </div>
+                {/* Right column - Description with bullets */}
                 
+                <div>
+  {experience.description.map((section, idx) => (
+    <div key={idx} className="mb-4">
+      <h4 className="text-lg font-semibold text-white mb-2">
+        {section.heading}
+      </h4>
+      <ul className="list-disc text-gray-300 space-y-1 pl-4">
+        {section.points.map((point, i) => (
+          <li key={i}>{point}</li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</div>
+
               </div>
             </div>
           ))}
