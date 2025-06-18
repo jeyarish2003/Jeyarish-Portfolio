@@ -19,7 +19,7 @@ function Home() {
         <div className="flex ">
           <a
             className="p-3"
-            href="https://api.whatsapp.com/send?phone=8015705516"
+            href="https://api.whatsapp.com/send?phone=918015705516"
           >
             <FaWhatsapp />
           </a>
